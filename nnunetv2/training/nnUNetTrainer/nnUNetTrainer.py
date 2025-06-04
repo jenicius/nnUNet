@@ -120,8 +120,8 @@ class nnUNetTrainer(object):
 
         ### Setting all the folder names. We need to make sure things don't crash in case we are just running
         # inference and some of the folders may not be defined!
-        self.preprocessed_dataset_folder_base = join(nnUNet_preprocessed, self.plans_manager.dataset_name) \
-            if nnUNet_preprocessed is not None else None
+        self.preprocessed_dataset_folder_base = '/kaggle/input/dataset504-task4' #join(nnUNet_preprocessed, self.plans_manager.dataset_name) \
+            #if nnUNet_preprocessed is not None else None
         self.output_folder_base = join(nnUNet_results, self.plans_manager.dataset_name,
                                        self.__class__.__name__ + '__' + self.plans_manager.plans_name + "__" + configuration) \
             if nnUNet_results is not None else None
